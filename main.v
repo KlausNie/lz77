@@ -15,6 +15,10 @@ fn main() {
 
 	// different sizes yield different compression results
 	// these sizes are independent on the uncompression
+
+	// TODO
+	// as seen with this example 'abadakadabra', the compression algo does not yet
+	// fully work. culprit is the longest_common_substring_prefix part
 	compressed := lz77.compress(uncompressed_text, 256, 128)
 
 	reconstructed_text := lz77.uncompress(compressed)
